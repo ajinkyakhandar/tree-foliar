@@ -1,0 +1,27 @@
+{
+  "name": "tree-foliar",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A package to generate a tree folder structure of your application",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajinkyakhandar/tree-foliar.git"
+  },
+  "author": "Ajinkya Khandar",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "chokidar": "^4.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/ajinkyakhandar/tree-foliar/issues"
+  },
+  "homepage": "https://github.com/ajinkyakhandar/tree-foliar#readme"
+}
