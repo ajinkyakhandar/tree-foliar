@@ -5,6 +5,7 @@
 - Generate a tree-like structure of directories and files.
 - Ignore specific files and directories based on user-defined criteria.
 - Output the tree structure to a file or print it to the console.
+- Monitor the specified directory for changes in real-time using watch mode.
 
 ## Installation
 To install the package, you can use npm:
@@ -13,21 +14,17 @@ To install the package, you can use npm:
 npm install -g tree-foliar
 ```
 
-Alternatively, you can run it directly using npx:
-
-```bash
-npx tree-foliar
-```
-
 ## Usage
-
-### Command Line Syntax
-
-You can run `tree-foliar` with the following syntax:
+Run the command using:
 
 ```bash
-npx tree-foliar <directory> <output file> [ignore list]
+npx tree-foliar <directory-path> [-ignore or -i <ignore-list>] [-write or -w <output-file>] [--watch]
 ```
+
+## Options
+- `-i, --ignore <comma-separated list>`: Ignore specific files or folders (e.g., `node_modules,src`).
+- `-w, --write <output-file>`: Write the directory structure to the specified output file (e.g., `output.txt`).
+- `--watch`: Enable watch mode to monitor changes and regenerate the tree automatically.
 
 ### Examples
 
@@ -41,16 +38,22 @@ npx tree-foliar <directory> <output file> [ignore list]
 2. **Print Directory Structure with Ignored Files:**
    You can also specify files to ignore:
    ```bash
-   npx tree-foliar ..\test-app\ node_modules,src
+   npx tree-foliar ..\test-app\ -i node_modules,src
    ```
 
-3. **Write Directory Structure to a File:**
-   To write the structure to `.\asset\output.txt`, while ignoring `node_modules`:
+3. **Write Directory Structure to a File**:  
+   To write the structure to `.\asset\output.txt`, use the following command:
+
    ```bash
-   npx tree-foliar -w ..\test-app\ .\asset\output.txt node_modules
+   npx tree-foliar ..\test-app\ -w .\asset\output.txt
+   ```
+   While ignoring node_modules, specify the ignored folder as follows:
+   
+   ```bash
+   npx tree-foliar ..\test-app\ -i node_modules -w .\asset\output.txt
    ```
 
-   4. **Enable Watch Mode for Auto-Updates:**
+4. **Enable Watch Mode for Auto-Updates**:
 
    To watch for changes in the `src` directory and automatically update `directory_structure.txt`, run:
 
