@@ -55,25 +55,18 @@ npx tree-foliar <directory-path> [-ignore or -i <ignore-list>] [-write or -w <ou
 
 4. **Enable Watch Mode for Auto-Updates**:
 
-   To watch for changes in the `src` directory and automatically update `directory_structure.txt`, run:
+   To watch for changes in the `src` directory and automatically update `output.txt`, <br>
+   This command will regenerate the output whenever files or folders in the specified directory change.
 
    ```bash
-   npx tree-foliar -w ..\test-app\ .\asset\output.txt node_modules --watch
+   npx tree-foliar ..\test-app\ -w .\asset\output.txt --watch
    ```
 
    You can also use the following command to enable watch mode directly:
 
    ```bash
-   npx tree-foliar ..\test-app\ node_modules --watch
+   npx tree-foliar ..\test-app\ --watch
    ```
-
-   This command will regenerate the output whenever files or folders in the specified directory change.
-
-### Options
-- `-w`: Write the output to a specified file instead of printing it to the console.
-- `<directory>`: The path to the directory you want to analyze.
-- `<output file>`: The file where the output will be saved (used only in write mode).
-- `[ignore list]`: Comma-separated list of directories or files to ignore during traversal.
 
 ### Sample Output
 The output of tree-foliar provides a structured, tree-like view of your project's directory. For example, running tree-foliar on a sample project might yield the following:
@@ -87,14 +80,7 @@ project-root
 │   └── index.js
 └── package.json
 
-## License
-This project is licensed under the ISC License - see the LICENSE file for details.
-
 ## Contributing
 
 Contributions are welcome! Please create an issue or submit a pull request for any changes or enhancements.
 
-## Acknowledgements
-
-- Inspired by various directory tree generation tools.
-- Thanks to the open-source community for their contributions and ideas.
