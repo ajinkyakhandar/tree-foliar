@@ -69,18 +69,5 @@ npx tree-foliar <directory-path> [-ignore or -i <ignore-list>] [-write or -w <ou
    ```
 
 ### Sample Output
-The output of tree-foliar provides a structured, tree-like view of your project's directory. For example, running tree-foliar on a sample project might yield the following:
-
-project-root
-├── src
-│   ├── components
-│   │   ├── Header.js
-│   │   └── Footer.js
-│   ├── App.js
-│   └── index.js
-└── package.json
-
-## Contributing
-
-Contributions are welcome! Please create an issue or submit a pull request for any changes or enhancements.
-
+The output of tree-foliar provides a structured, tree-like view of your project's directory. For example, running tree-foliar on a sample project might yield the following:<br><br>
+<img width="247" alt="sample_output" src="https://github.com/user-attachments/assets/f16dbeb0-9586-4376-8919-55e315670f0a">
